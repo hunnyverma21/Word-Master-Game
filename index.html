@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>Word Master | Word Puzzle Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">W</span><div><h1>Word Master</h1><p>Think · Unscramble · Win</p></div></div>
+      <div class="score-pill">⭐ <span id="score">0</span> pts</div>
+    </header>
+
+    <section class="game-card" id="game">
+      <div class="level-row"><span id="level">LEVEL 1 / 8</span><span id="progress-label">0% completed</span></div>
+      <div class="progress-track"><div id="progress"></div></div>
+      <div class="eyebrow">UNSCRAMBLE THE WORD</div>
+      <div class="letter-area">
+        <div class="scrambled" id="scrambled">P L E A P</div>
+        <p>Rearrange the letters to make a meaningful word.</p>
+      </div>
+      <label for="answer">YOUR ANSWER</label>
+      <input id="answer" type="text" placeholder="Type your word here..." autocomplete="off" spellcheck="false">
+      <div class="hint" id="hint" hidden></div>
+      <div class="feedback" id="feedback" role="status" aria-live="polite"></div>
+      <div class="actions">
+        <button class="primary" id="check">Check answer</button>
+        <button class="secondary" id="hint-button">💡 Get a hint</button>
+      </div>
+      <button class="next" id="next" hidden>Next level →</button>
+      <div class="footer"><span>🧠 Build your vocabulary</span><span>+10 points per correct answer</span></div>
+    </section>
+
+    <section class="result-card" id="result" hidden>
+      <div class="trophy">🏆</div>
+      <p class="eyebrow">GAME COMPLETED</p>
+      <h2 id="result-title">Word Genius!</h2>
+      <div class="final-score"><span id="final-score">0</span><small> / 80 points</small></div>
+      <p id="result-message">Great effort. Keep learning new words!</p>
+      <button class="primary" id="restart">↻ Play again</button>
+    </section>
+    <p class="copyright">WORD MASTER · A little challenge for your brain</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

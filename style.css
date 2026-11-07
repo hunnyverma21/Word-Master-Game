@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; --bg:#0b1120; --panel:#151f32; --panel2:#1d2a40; --text:#f8fafc; --muted:#9aa9bd; --accent:#8b5cf6; --green:#22c55e; }
+body { margin:0; min-height:100vh; padding:28px 16px; display:grid; place-items:center; background:radial-gradient(ellipse at top,#1c2850 0%,var(--bg) 58%); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+.app { width:min(100%,540px); }
+.topbar { display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; gap:12px; }
+.brand { display:flex; align-items:center; gap:12px; }
+.brand-icon { width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#8b5cf6,#4f46e5);font-weight:900;font-size:24px;box-shadow:0 8px 25px #6d28d955; }
+h1 { font-size:20px;margin:0;letter-spacing:.2px; } .brand p { margin:3px 0 0;color:var(--muted);font-size:12px; }
+.score-pill { background:#26334b;border:1px solid #34445e;padding:10px 14px;border-radius:999px;font-weight:750;white-space:nowrap; }
+.game-card,.result-card { background:linear-gradient(160deg,#18243a,#111a2b);border:1px solid #2a3a54;border-radius:24px;padding:26px;box-shadow:0 24px 70px #0005; }
+.level-row { display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:11px;font-weight:800;letter-spacing:1px; }
+.progress-track {height:7px;background:#2a3850;border-radius:20px;margin:12px 0 28px;overflow:hidden;}
+#progress {height:100%;width:0;background:linear-gradient(90deg,#8b5cf6,#38bdf8);border-radius:20px;transition:width .3s;}
+.eyebrow {color:#b9a4ff;font-size:11px;font-weight:850;letter-spacing:2px;text-align:center;}
+.letter-area {text-align:center;background:linear-gradient(145deg,#202e48,#19253a);border:1px solid #33445f;border-radius:18px;padding:27px 12px;margin:14px 0 24px;}
+.scrambled {font-size:clamp(27px,8vw,39px);font-weight:900;letter-spacing:clamp(5px,2vw,11px);color:#fff;text-shadow:0 4px 22px #8b5cf666;}
+.letter-area p {color:var(--muted);font-size:13px;margin:12px 0 0;}
+label {display:block;color:#cbd5e1;font-size:11px;font-weight:800;letter-spacing:1.2px;margin-bottom:9px;}
+input {width:100%;padding:15px 16px;border-radius:12px;border:1px solid #40516d;background:#0d1728;color:white;font-size:17px;outline:none;transition:border .2s,box-shadow .2s;}
+input:focus {border-color:#a78bfa;box-shadow:0 0 0 3px #8b5cf633;} input:disabled {opacity:.8;}
+.actions {display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
+button {border:0;border-radius:12px;padding:14px 16px;font-size:14px;font-weight:800;cursor:pointer;transition:transform .15s,filter .15s;}
+button:hover {filter:brightness(1.12);transform:translateY(-1px);} button:active {transform:translateY(0);}
+.primary {background:linear-gradient(135deg,#8b5cf6,#6366f1);color:white;box-shadow:0 8px 22px #6366f133;}
+.secondary {background:#26344c;color:#e2e8f0;border:1px solid #3a4b66;}
+.next {width:100%;margin-top:12px;background:#15803d;color:white;}
+.hint {margin-top:12px;padding:12px 14px;border-radius:11px;background:#352d20;color:#fcd78b;font-size:13px;line-height:1.5;}
+.feedback {min-height:22px;margin-top:12px;font-size:13px;font-weight:700;text-align:center;}
+.feedback.good {color:#4ade80;} .feedback.bad {color:#fca5a5;}
+.footer {border-top:1px solid #2a3850;margin-top:25px;padding-top:16px;display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:10px;}
+.result-card {text-align:center;padding:36px 26px;} .trophy {font-size:54px;margin-bottom:10px;} .result-card h2 {font-size:27px;margin:10px 0;}
+.final-score {font-size:48px;font-weight:900;color:#86efac;margin:16px 0 5px;} .final-score small {font-size:16px;color:var(--muted);font-weight:600;}
+.result-card>p:not(.eyebrow) {color:var(--muted);margin-bottom:24px;} .result-card button {width:100%;}
+.copyright {text-align:center;color:#64748b;font-size:10px;letter-spacing:1px;margin-top:20px;}
+[hidden] {display:none!important;}
+@media(max-width:420px){.game-card{padding:20px}.footer{font-size:9px}.actions{grid-template-columns:1fr}.topbar{align-items:flex-start}}
